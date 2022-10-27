@@ -1,7 +1,6 @@
 let fecha_entrega = document.getElementById("delivery_day")
 let rangos_entrega = document.getElementById("delivery_time_id")
 
-const corsAnywhere = 'https://cors-anywhere.herokuapp.com/'
 const url = "https://api-dev.revoolt.me/v3/"
 
 var OptionsRangos = {
@@ -46,7 +45,7 @@ fecha_entrega.addEventListener("change", (event)=>{
 		}
 
 		//si la fecha de entrega es mayor a la fecha actual hacemos la llamada para ver los rangos horarios
-		fetch(corsAnywhere+url+"slots", OptionsRangos)
+		fetch(url+"slots", OptionsRangos)
 			.then(response => response.json())
 			.then(result => {
 				//extraemos los rangos horarios de cada dia y los filtramos segun el dia seleccionado por el cliente
@@ -143,6 +142,12 @@ const handleFormSubmit = (event) => {
 
 	let OptionsPedidos = Object.assign(Options, {body})
 
+	console.log(OptionsPedidos)
+	fetch(url+"orders/", OptionsPedidos)
+	.then(response => response.json())
+	.then(resp => {
+		console.log(JSON.stringify(resp))
+	})
 	results.textContent = JSON.stringify(body)
   }
    
