@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Revoolt x adresles</title>
+</head>
+
+<body>
+
+    <section class="contact-form">
+        <h1 class="form__title">Revoolt x adresles</h1>
+        <form>
+            <h2>Fecha y hora</h2>
+            <div class="input-group">
+                <label for="delivery_day">Día de entrega</label>
+                <input id="delivery_day" name="delivery_day" type="date" >
+            </div>
+            
+            <div class="input-group">
+                <label for="delivery_time_id">Franja horaria de entrega</label>
+                <select id="delivery_time_id" name="delivery_time_id">
+                    <option disabled selected>Selecciona una opción</option>
+                </select>
+            </div>
+            
+            <h2>Datos destinatario</h2>
+            <div class="input-group">
+                <label for="name">Nombre y Apellidos</label>
+                <input id="name" name="name_surname" type="text" placeholder="Jane Doe" />
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Teléfono</label>
+                <input type="text" name="phone_number" id="phone" placeholder="+34612345678" >
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="example@mail.com" />
+            </div>
+
+            <div class="input-group">
+                <label for="allow_notifications">¿Quieres recibir notificaciones?</label>
+                <select id="allow_notifications" name="allow_notifications">
+                    <option value="true">Sí</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+            <h2>Dirección</h2>
+            
+            <div class="input-group">
+                <label for="route">Calle</label>
+                <input id="route" name="route" type="text" >
+            </div>
+            <div class="address1">
+            <div class="input-group">
+                <label for="street_number">Número</label>
+                <input id="street_number" name="street_number" type="text" >
+            </div>
+       
+            <div class="input-group">
+                <label for="address_line2">Piso/Puerta/Escalera/Etc</label>
+                <input id="address_line2" name="address_line2" type="text" >
+            </div>
+        </div>
+            <div class="input-group">
+                <label for="postal_code">Código postal</label>
+                <input id="postal_code" name="postal_code" type="text" >
+            </div>
+            <div class="input-group">
+                <label for="city">Ciudad</label>
+                <input id="city" name="city" type="text" >
+            </div>
+            <div class="input-group">
+                <label for="state_province">Provincia</label>
+                <input id="state_province" name="state_province" type="text" >
+            </div>
+            <div class="input-group">
+                <label for="easy_access">¿Es fácil acceder al lugar de entrega?</label>
+                <select id="easy_access" name="easy_access">
+                    <option value="true">Sí</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+            <h2>Paquetes</h2>
+            <div class="packages">
+                <div class="input-group">
+                    <label for="dry_box">Grandes</label>
+                    <input id="dry_box" name="dry_box" type="number" min="0" value="0">
+                </div>
+                <div class="input-group">
+                    <label for="dry_bag">Medianos</label>
+                    <input id="dry_bag" name="dry_bag" type="number" min="0" value="0">
+                </div>
+                <div class="input-group">
+                    <label for="dry_pack">Pequeños</label>
+                    <input id="dry_pack" name="dry_pack" type="number" min="0" value="0">
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="notes">¿Alguna indicación para el repartidor?</label>
+                <input id="notes" name="notes" type="text">
+            </div>
+            <div class="input-group">
+                <label for="cash_on_delivery">¿Pago contrareembolso?</label>
+                <select id="cash_on_delivery" name="cash_on_delivery">
+                    <option value="true">Sí</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <div class="results">
+        <h2>Datos JSON</h2>
+        <pre class="preview"></pre>
+    </div>
+
+    <script src="js/js.js"></script>
+</body>
+
+</html>
